@@ -1,5 +1,6 @@
 package ru.filenko.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,26 +19,22 @@ public class LoginPage extends BaseView {
     @FindBy(xpath = "//input[@type='checkbox']")
     private WebElement inputCheck;
 
-    public LoginPage ckeckYes(){
-        inputCheck.click();
-        return this;
-    }
-
 
     public LoginPage(WebDriver driver) {
         super(driver);
     }
 
+    @Step(value = "Enter login {login}")
     public LoginPage enterLogin(String login) {
         inputLogin.sendKeys(login);
         return this;
     }
-
+    @Step(value = "Enter password {password}")
     public LoginPage enterPassword(String password) {
         inputPassword.sendKeys(password);
         return this;
     }
-
+    @Step(value = "Click login button")
     public HomePage clickLoginButton() {
         buttonSignIn.click();
         return new HomePage(driver);
@@ -45,6 +42,7 @@ public class LoginPage extends BaseView {
 
 
     // Для использования в других тестах
+    @Step(value = "Auth with login = {login}, password = {password}")
     public HomePage authoriseScenario(String login, String password) {
         inputLogin.sendKeys(login);
         inputPassword.sendKeys(password);

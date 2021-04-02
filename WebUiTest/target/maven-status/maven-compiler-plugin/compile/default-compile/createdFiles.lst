@@ -1,0 +1,14 @@
+ru\filenko\pages\NewProjectPage.class
+ru\filenko\SubMenu.class
+ru\filenko\views\NavigationBar.class
+ru\filenko\enums\NavigationBarTabs.class
+ru\filenko\views\NavigationBar$1.class
+ru\filenko\views\ProjectSubMenu$1.class
+ru\filenko\BaseView.class
+ru\filenko\IMenuButtons.class
+ru\filenko\pages\HomePage.class
+ru\filenko\pages\PageProjects.class
+ru\filenko\enums\SubMenuButtons.class
+ru\filenko\ISubMenu.class
+ru\filenko\views\ProjectSubMenu.class
+ru\filenko\pages\LoginPage.class

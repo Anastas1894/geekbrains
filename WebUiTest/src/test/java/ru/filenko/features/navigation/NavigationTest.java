@@ -1,5 +1,6 @@
 package ru.filenko.features.navigation;
 
+import io.qameta.allure.Feature;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import ru.filenko.GeneralSettings;
@@ -7,6 +8,9 @@ import ru.filenko.common.Configuration;
 import ru.filenko.enums.NavigationBarTabs;
 import ru.filenko.pages.LoginPage;
 
+import static ru.filenko.common.Configuration.BASE_URL;
+
+@Feature("Navigation")
 public class NavigationTest extends GeneralSettings {
     @ParameterizedTest
     @MethodSource("navigationTabProvider")

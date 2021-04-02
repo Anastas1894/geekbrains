@@ -1,5 +1,6 @@
 package ru.filenko.views;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import ru.filenko.BaseView;
 import ru.filenko.IMenuButtons;
@@ -13,6 +14,7 @@ public class ProjectSubMenu extends SubMenu {
     }
 
     @Override
+    @Step("click on sub menu button {buttons}")
     public BaseView clickMenuButton(IMenuButtons buttons) {
         if (buttons instanceof SubMenuButtons) {
             switch ((SubMenuButtons) buttons) {

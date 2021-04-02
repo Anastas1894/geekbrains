@@ -1,5 +1,6 @@
 package ru.filenko.pages;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import ru.filenko.BaseView;
 import ru.filenko.views.NavigationBar;
@@ -14,11 +15,11 @@ public class HomePage extends BaseView {
         super(driver);
         this.navigationBar = new NavigationBar(driver);
     }
-
+    @Step(value = "Assert that current url equals {url}")
     public void checkUrl(String url) {
         assertEquals(driver.getCurrentUrl(), url);
     }
-
+    @Step("In navigation bar")
     public NavigationBar getPageNavigation() {
         return navigationBar;
     }
